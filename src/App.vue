@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>app组件</h1>
+    <router-view></router-view>
 
 
   </div>
@@ -15,6 +15,6 @@ export default {
 </script>
 
 <style scoped lang="stylus">
- #app
-   color red
+
+
 </style>

@@ -1,11 +1,26 @@
 const path = require('path');
+const px2rem = require('postcss-px2rem')
+
+// 配置postcs-px2rem
+const postcss = px2rem({
+    remUnit: 70
+})
 function resolve (dir) {
     return path.join(__dirname, dir)
 }
 
 module.exports={
-    runtimeCompiler: true,//是否开启编译器
+    // runtimeCompiler: true,//是否开启编译器
     lintOnSave: false, //关闭eslint语法检查
+    css: { // 添加postcss配置
+        loaderOptions: {
+            postcss: {
+                plugins: [
+                    postcss
+                ]
+            }
+        }
+    },
     devServer:{
         open:true
     },

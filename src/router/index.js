@@ -6,6 +6,7 @@ import routes from './routes'
 Vue.use(VueRouter)
 
 //生成路由器
-export default new VueRouter({
+const router = new VueRouter({
     routes
 })
+export default router
